@@ -1,0 +1,13 @@
+<div style="background-color: white; padding: 20px;">
+  <h4>Ingresa el mensaje del post</h4>
+  <form (ngSubmit)="registerPost()" [formGroup]="form">
+    <input style="margin-top: 10px;" type="text" formControlName="message" placeholder="Message">
+    <button
+          class="btn btn-primary"
+          type="submit"
+          style="margin-top: 10px"
+        >
+          Crear post</button
+        >
+    </form>
+</div>

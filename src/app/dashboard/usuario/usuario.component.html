@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Untitled</title>
+  </head>
+
+  <body>
+    <div style="padding: 10px">
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="deleteMe()"
+        style="background: rgb(253, 27, 13)"
+      >
+        Borráme
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="logout()"
+        style="background: rgb(253, 27, 13); margin-left: 10px"
+      >
+        Cerrar sesión
+      </button>
+    </div>
+    <div style="padding: 10px">
+      <div style="padding-top: 5px; padding-bottom: 5px">
+        <label class="form-label" style="padding-right: 20px; width: 250px"
+          >Creación del usuario:</label
+        ><input
+          type="text"
+          [value]="createdAt"
+          disabled=""
+          readonly=""
+          style="width: 250px"
+        />
+      </div>
+      <div style="padding-top: 5px; padding-bottom: 5px">
+        <label class="form-label" style="padding-right: 20px; width: 250px"
+          >Actualización del usuario:</label
+        ><input
+          type="text"
+          [value]="updatedAt"
+          disabled=""
+          readonly=""
+          style="width: 250px"
+        />
+      </div>
+    </div>
+    <form style="padding: 10px" [formGroup]="updateForm" (ngSubmit)="updateChanges()">
+      <label class="form-label">Nombre de usurio:</label
+      ><input formControlName="username" class="form-control" type="text" /><label
+        class="form-label"
+        >Descripción:</label
+      ><input formControlName="description" class="form-control" type="text" /><label class="form-label"
+        >Contraseña:</label
+      ><input formControlName="password" class="form-control" type="password" /><button
+        class="btn btn-primary d-block"
+        style="margin-top: 10px"
+        type="submit"
+      >
+        Actualizar usuario
+      </button>
+    </form>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

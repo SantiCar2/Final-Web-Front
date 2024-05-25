@@ -1,0 +1,17 @@
+<div>
+  <app-navbar></app-navbar>
+
+  @if (isSelected('peleas')){
+    <app-peleas></app-peleas>
+  }
+  @if (isSelected('peleadores')){
+    <app-peleador></app-peleador>
+  }
+  @if (isSelected('foro')){
+    <app-foro></app-foro>
+  }
+  @if (isSelected('usuario')){
+    <app-usuario></app-usuario>
+  }
+
+</div>

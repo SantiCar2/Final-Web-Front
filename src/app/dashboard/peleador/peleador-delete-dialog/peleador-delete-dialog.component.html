@@ -1,0 +1,13 @@
+<div style="background-color: white; padding: 20px;">
+  <h4>Ingresa el id del peleador</h4>
+  <form (ngSubmit)="deleteFighter()" [formGroup]="form">
+    <input type="number" formControlName="id" placeholder="ID">
+    <button
+          class="btn btn-primary"
+          type="submit"
+          style="background: rgb(253, 27, 13); margin-top: 10px"
+        >
+          Borrar peleador</button
+        >
+    </form>
+</div>
